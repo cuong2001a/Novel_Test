@@ -1,0 +1,11 @@
+.custom-arrow{
+    padding: 8px;
+    background-color: #383A42;
+    border-radius: 12px;
+}
+.slick-slide>div{
+    margin: 0 8px;
+}
+button.slick-arrow{
+    display: none !important;
+}
