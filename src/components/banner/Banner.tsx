@@ -19,8 +19,8 @@ interface SlickSettings {
     autoplaySpeed: number;
     slidesToShow: number;
     slidesToScroll: number;
-    appendDots: (dots: React.ReactNode) => React.ReactNode;
-    customPaging: (i: number) => React.ReactNode;
+    appendDots: (dots: React.ReactNode) => React.ReactElement;
+    customPaging: (i: number) => React.ReactElement;
 }
 
 interface INFTDropCalendar {
@@ -41,7 +41,7 @@ export const Banner = () => {
           },
     ];
 
-    const CustomDots = (dots: React.ReactNode): React.ReactNode => (
+    const CustomDots = (dots: React.ReactNode): React.ReactElement => (
         <div className="custom-dots-container">
           {dots}
         </div>
@@ -71,7 +71,7 @@ export const Banner = () => {
                 {listItem?.map((itm) => {
                     return (
                         <div key={itm?.id} className="banner__item">
-                            <Image className='w-full' src={itm?.image} alt=""/>
+                            <Image className='w-full' src={itm?.image} alt="banner"/>
                         </div>
                     )
                 })}
